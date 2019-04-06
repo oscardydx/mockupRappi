@@ -17,3 +17,11 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.get('register','Auth/RegisterController.index')
+Route.post('register','Auth/RegisterController.register').as('register')
+
+Route.get('login','Auth/LoginController.index')
+Route.post('login','Auth/LoginController.login').as('login')
+
+Route.get('store','StoreController.index').as('store')
